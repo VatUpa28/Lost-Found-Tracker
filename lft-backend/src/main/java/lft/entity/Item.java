@@ -1,4 +1,4 @@
-package Lost.Found.Tracker.Entity;
+package lft.entity;
 
 import jakarta.persistence.*;
 

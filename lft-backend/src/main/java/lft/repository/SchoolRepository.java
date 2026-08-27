@@ -1,6 +1,6 @@
-package Lost.Found.Tracker.Repository;
+package lft.repository;
 
-import Lost.Found.Tracker.Entity.School;
+import lft.entity.School;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SchoolRepository extends JpaRepository<School, Long> {

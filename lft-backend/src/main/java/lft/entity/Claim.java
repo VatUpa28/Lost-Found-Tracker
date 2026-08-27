@@ -1,18 +1,14 @@
-package Lost.Found.Tracker.Entity;
+package lft.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
-@Table(name = "reports")
-public class Report {
+@Table(name = "claims")
+public class Claim {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String type;
 
     @ManyToOne
     @JoinColumn(name = "by_user_id", nullable = false)
@@ -22,22 +18,12 @@ public class Report {
     @JoinColumn(name = "item_id", nullable = false)
     private Item item;
 
-    private LocalDate date;
-
     private String status;
 
-    public Report() {
+    public Claim() {
     }
 
     // Getters and Setters
-
-    public User getBy() {
-        return by;
-    }
-
-    public void setBy(User by) {
-        this.by = by;
-    }
 
     public Long getId() {
         return id;
@@ -47,12 +33,12 @@ public class Report {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public User getBy() {
+        return by;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setBy(User by) {
+        this.by = by;
     }
 
     public Item getItem() {
@@ -61,14 +47,6 @@ public class Report {
 
     public void setItem(Item item) {
         this.item = item;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
     }
 
     public String getStatus() {

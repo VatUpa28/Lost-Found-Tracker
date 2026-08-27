@@ -1,6 +1,6 @@
-package Lost.Found.Tracker.Repository;
+package lft.repository;
 
-import Lost.Found.Tracker.Entity.Report;
+import lft.entity.Report;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ReportRepository extends JpaRepository<Report, Long> {

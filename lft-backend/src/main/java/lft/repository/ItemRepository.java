@@ -1,6 +1,6 @@
-package Lost.Found.Tracker.Repository;
+package lft.repository;
 
-import Lost.Found.Tracker.Entity.Item;
+import lft.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ItemRepository extends JpaRepository<Item, Long> {

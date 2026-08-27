@@ -1,7 +1,7 @@
-package Lost.Found.Tracker.Entity;
+package lft.entity;
 
 import jakarta.persistence.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 
 @Entity
@@ -18,6 +18,7 @@ public class School {
     private String state;
 
     @OneToMany(mappedBy = "school")
+    @JsonIgnore
     private List<User> users;
 
     /* Getters and setters */
